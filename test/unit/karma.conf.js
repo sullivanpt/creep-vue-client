@@ -14,7 +14,12 @@ module.exports = function (config) {
     browsers: ['PhantomJS'],
     frameworks: ['mocha', 'sinon-chai'],
     reporters: ['spec', 'coverage'],
-    files: ['./index.js'],
+    files: [
+      // See https://github.com/vuejs-templates/webpack/issues/260
+      '../../node_modules/es6-promise/dist/es6-promise.auto.js',
+      
+      './index.js'
+    ],
     preprocessors: {
       './index.js': ['webpack', 'sourcemap']
     },
