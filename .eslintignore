@@ -1,2 +1,4 @@
 build/*.js
 config/*.js
+test/unit/coverage/**/*.js
+test/e2e/reports/**/*.js

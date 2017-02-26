@@ -8,14 +8,14 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     count: 0,
-    posts: { /* [id]: { post } */ }
+    posts: { /* [handle]: { post } */ }
   },
   getters: {
     count (state) {
       return state.count
     },
     firstPost (state) {
-      return state.posts[1]
+      return state.posts[Object.keys(state.posts)[0]]
     }
   },
   mutations: {
@@ -23,7 +23,7 @@ export default new Vuex.Store({
       state.count++
     },
     savePost (state, post) {
-      Vue.set(state.posts, post.id, post)
+      Vue.set(state.posts, post.handle, post)
     }
   },
   actions: {

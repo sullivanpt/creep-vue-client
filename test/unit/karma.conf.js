@@ -17,7 +17,6 @@ module.exports = function (config) {
     files: [
       // See https://github.com/vuejs-templates/webpack/issues/260
       '../../node_modules/es6-promise/dist/es6-promise.auto.js',
-      
       './index.js'
     ],
     preprocessors: {
